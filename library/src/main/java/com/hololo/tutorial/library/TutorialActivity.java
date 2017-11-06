@@ -18,20 +18,20 @@ import android.widget.RelativeLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TutorialActivity extends AppCompatActivity implements View.OnClickListener {
+public class TutorialActivity extends AppCompatActivity {
 
     private List<Step> steps;
     private StepPagerAdapter adapter;
 
     private ViewPager pager;
-    private Button next, prev;
+    //private Button next, prev;
     private LinearLayout indicatorLayout;
     private FrameLayout containerLayout;
     private RelativeLayout buttonContainer;
 
     private int currentItem;
 
-    private String prevText, nextText, finishText, cancelText;
+    //private String prevText, nextText, finishText, cancelText;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,17 +40,17 @@ public class TutorialActivity extends AppCompatActivity implements View.OnClickL
 
         setContentView(R.layout.activity_tutorial);
         steps = new ArrayList<>();
-        initTexts();
+        //initTexts();
         initViews();
         initAdapter();
     }
 
-    private void initTexts() {
+    /*private void initTexts() {
         prevText = "Back";
         cancelText = "Cancel";
         finishText = "Finish";
         nextText = "Next";
-    }
+    }*/
 
     private void initAdapter() {
         adapter = new StepPagerAdapter(getSupportFragmentManager(), steps);
@@ -84,7 +84,7 @@ public class TutorialActivity extends AppCompatActivity implements View.OnClickL
 
     private void controlPosition(int position) {
         notifyIndicator();
-        if (position == steps.size() - 1) {
+        /*if (position == steps.size() - 1) {
             next.setText(finishText);
             prev.setText(prevText);
         } else if (position == 0) {
@@ -93,7 +93,7 @@ public class TutorialActivity extends AppCompatActivity implements View.OnClickL
         } else {
             prev.setText(prevText);
             next.setText(nextText);
-        }
+        }*/
 
         containerLayout.setBackgroundColor(steps.get(position).getBackgroundColor());
         buttonContainer.setBackgroundColor(steps.get(position).getBackgroundColor());
@@ -103,14 +103,14 @@ public class TutorialActivity extends AppCompatActivity implements View.OnClickL
         currentItem = 0;
 
         pager = (ViewPager) findViewById(R.id.viewPager);
-        next = (Button) findViewById(R.id.next);
-        prev = (Button) findViewById(R.id.prev);
+        //next = (Button) findViewById(R.id.next);
+        //prev = (Button) findViewById(R.id.prev);
         indicatorLayout = (LinearLayout) findViewById(R.id.indicatorLayout);
         containerLayout = (FrameLayout) findViewById(R.id.containerLayout);
         buttonContainer = (RelativeLayout) findViewById(R.id.buttonContainer);
 
-        next.setOnClickListener(this);
-        prev.setOnClickListener(this);
+        //next.setOnClickListener(this);
+        //prev.setOnClickListener(this);
     }
 
     public void addFragment(Step step) {
@@ -161,14 +161,14 @@ public class TutorialActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
-    @Override
+    /*@Override
     public void onClick(View v) {
         if (v.getId() == R.id.next) {
             changeFragment(true);
         } else if (v.getId() == R.id.prev) {
             changeFragment(false);
         }
-    }
+    }*/
 
     private void changeFragment(int position) {
         pager.setCurrentItem(position, true);
@@ -188,7 +188,7 @@ public class TutorialActivity extends AppCompatActivity implements View.OnClickL
             pager.setCurrentItem(item, true);
     }
 
-    public void setPrevText(String text) {
+    /*public void setPrevText(String text) {
         prevText = text;
     }
 
@@ -203,5 +203,5 @@ public class TutorialActivity extends AppCompatActivity implements View.OnClickL
     public void setCancelText(String text) {
         cancelText = text;
     }
-
+*/
 }

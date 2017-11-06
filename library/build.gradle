@@ -1,14 +1,18 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+        group = 'com.hololo.tutorial.sample' // Change this to match your package name
+        version = '1.0.1' // Change this to match your version number
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 

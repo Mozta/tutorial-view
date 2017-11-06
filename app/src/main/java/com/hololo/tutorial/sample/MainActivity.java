@@ -12,9 +12,29 @@ public class MainActivity extends TutorialActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addFragment(new Step.Builder().setTitle(getString(R.string.automatic_data)).setContent(getString(R.string.gm_finds_photos)).setBackgroundColor(Color.parseColor("#FF0957")).setDrawable(R.drawable.ss_1).setSummary(getString(R.string.continue_and_learn)).build());
-        addFragment(new Step.Builder().setTitle(getString(R.string.choose_the_song)).setContent(getString(R.string.swap_to_the_tab)).setBackgroundColor(Color.parseColor("#00D4BA")).setDrawable(R.drawable.ss_2).setSummary(getString(R.string.continue_and_update)).build());
-        addFragment(new Step.Builder().setTitle(getString(R.string.edit_data)).setContent(getString(R.string.update_easily)).setBackgroundColor(Color.parseColor("#1098FE")).setDrawable(R.drawable.ss_3).setSummary(getString(R.string.continue_and_result)).build());
-        addFragment(new Step.Builder().setTitle(getString(R.string.result_awesome)).setContent(getString(R.string.after_updating)).setBackgroundColor(Color.parseColor("#CA70F3")).setDrawable(R.drawable.ss_4).setSummary(getString(R.string.thank_you)).build());
+        addFragment(new Step.Builder().setTitle("Ahora sabrás cuantos litros te cargan en la gasolinera")
+                .setBackgroundColor(Color.parseColor("#99CC33"))
+                .setDrawable(R.drawable.banner1)
+                .build());
+        addFragment(new Step.Builder().setTitle("Identifica la gasolinera mejor evualuada")
+                .setBackgroundColor(Color.parseColor("#99CC33"))
+                .setDrawable(R.drawable.banner1)
+                .build());
+        addFragment(new Step.Builder().setTitle("Califica del 1 al 5 el servicio de las gasolineras")
+                .setBackgroundColor(Color.parseColor("#99CC33"))
+                .setDrawable(R.drawable.banner1)
+                .build());
+        addFragment(new Step.Builder().setTitle("Comparte tu calificación y comenta con otros usuarios")
+                .setBackgroundColor(Color.parseColor("#99CC33"))
+                .setDrawable(R.drawable.banner1)
+                .build());
+        addFragment(new Step.Builder().setTitle("Revisa cuánto te rinde el combustible despachado")
+                .setBackgroundColor(Color.parseColor("#99CC33"))
+                .setDrawable(R.drawable.banner1)
+                .build());
+        addFragment(new Step.Builder().setTitle("¡Disfruta éste y otros grandes beneficios que te brinda éste gadget y entra al futuro!")
+                .setBackgroundColor(Color.parseColor("#99CC33"))
+                .setDrawable(R.drawable.banner1)
+                .build());
     }
 }

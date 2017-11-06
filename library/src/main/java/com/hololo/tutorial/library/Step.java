@@ -6,8 +6,8 @@ import android.os.Parcelable;
 public class Step implements Parcelable {
 
     private String title;
-    private String content;
-    private String summary;
+    //private String content;
+    //private String summary;
     private int drawable;
     private int backgroundColor;
 
@@ -15,9 +15,9 @@ public class Step implements Parcelable {
         return title;
     }
 
-    public String getContent() {
+    /*public String getContent() {
         return content;
-    }
+    }*/
 
     public int getDrawable() {
         return drawable;
@@ -27,9 +27,9 @@ public class Step implements Parcelable {
         return backgroundColor;
     }
 
-    public String getSummary() {
+    /*public String getSummary() {
         return summary;
-    }
+    }*/
 
     public static class Builder {
 
@@ -48,15 +48,15 @@ public class Step implements Parcelable {
             return this;
         }
 
-        public Builder setContent(String content) {
+        /*public Builder setContent(String content) {
             step.content = content;
             return this;
-        }
+        }*/
 
-        public Builder setSummary(String summary) {
+        /*public Builder setSummary(String summary) {
             step.summary = summary;
             return this;
-        }
+        }*/
 
         public Builder setDrawable(int drawable) {
             step.drawable = drawable;
@@ -77,8 +77,8 @@ public class Step implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.title);
-        dest.writeString(this.content);
-        dest.writeString(this.summary);
+        //dest.writeString(this.content);
+        //dest.writeString(this.summary);
         dest.writeInt(this.drawable);
         dest.writeInt(this.backgroundColor);
     }
@@ -88,8 +88,8 @@ public class Step implements Parcelable {
 
     protected Step(Parcel in) {
         this.title = in.readString();
-        this.content = in.readString();
-        this.summary = in.readString();
+        //this.content = in.readString();
+        //this.summary = in.readString();
         this.drawable = in.readInt();
         this.backgroundColor = in.readInt();
     }

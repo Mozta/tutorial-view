@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Sample.iml" filepath="$PROJECT_DIR$/Sample.iml" />
+      <module fileurl="file://C:\Users\viper\Documents\IDIT\tutorial-view\Sample.iml" filepath="C:\Users\viper\Documents\IDIT\tutorial-view\Sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tutorial-view.iml" filepath="$PROJECT_DIR$/tutorial-view.iml" />
     </modules>
   </component>
 </project>

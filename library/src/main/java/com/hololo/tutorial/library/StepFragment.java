@@ -13,8 +13,8 @@ import android.widget.TextView;
 public class StepFragment extends Fragment {
 
     private TextView title;
-    private TextView content;
-    private TextView summary;
+    //private TextView content;
+    //private TextView summary;
     private ImageView imageView;
     private LinearLayout layout;
 
@@ -48,16 +48,16 @@ public class StepFragment extends Fragment {
 
     private void initData() {
         title.setText(step.getTitle());
-        content.setText(step.getContent());
-        summary.setText(step.getSummary());
+        //content.setText(step.getContent());
+        //summary.setText(step.getSummary());
         imageView.setImageResource(step.getDrawable());
         layout.setBackgroundColor(step.getBackgroundColor());
     }
 
     private void initViews(View view) {
         title = (TextView) view.findViewById(R.id.title);
-        content = (TextView) view.findViewById(R.id.content);
-        summary = (TextView) view.findViewById(R.id.summary);
+        //content = (TextView) view.findViewById(R.id.content);
+        //summary = (TextView) view.findViewById(R.id.summary);
         imageView = (ImageView) view.findViewById(R.id.image);
         layout = (LinearLayout) view.findViewById(R.id.container);
     }
